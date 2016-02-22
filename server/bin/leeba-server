@@ -1,0 +1,50 @@
+#!/usr/env node
+'use strict';
+const com = require('commander');
+const debug = require('debug')('leeba:boot');
+const fs = require('fs');
+const app = require('../app');
+const config = require('../config/main.json');
+// Setup commander
+com
+  .version('1.0.0')
+  .option('-p, --port [port]', 'The port to run the server on')
+  .option('-e, --env [env]', 'Environment to use. Use either "development", "production", "test" or one of the files in app/boot')
+  .parse(process.argv);
+
+// Load boot
+if (!com.port) {
+  com.port = config.port || 8080;
+}
+debug('Booting server...')
+if (com.env) {
+  debug('Checking if the environment %o exists in %s', com.env, "app/boot")
+  fs.stat(`app/boot/${com.env}.js`, (err, stat) => {
+    if (err) {
+      debug('Could not find the environment %o in %s!', com.env, "app/boot")
+      throw err;
+    } else {
+      debug('Found the environment %o in %s', com.env, "app/boot")
+      debug('Procceeding with boot...');
+      require(`../app/boot/${com.env}`).boot(app, {port: com.port});
+    }
+  });
+} else {
+  const env = process.env.NODE_ENV;
+  debug('Booting to $NODE_ENV...');
+  debug('Checking if the environment %o exists in %s', env, "app/boot")
+  fs.stat(`app/boot/${env}.js`, (err, stat) => {
+    if (err) {
+      debug('Could not find the environment %o in %s!', env, "app/boot")
+      const listenv = "leeba list environments";
+      debug('To get avalible environments, run %o', listenv)
+      debug('Tip: Do not use abbreviations for $NODE_ENV (i.e "dev" should be "development")')
+      throw err;
+    } else {
+      debug('Found the environment %o in %s', env, "app/boot");
+      debug('Procceeding with boot...');
+      require(`../app/boot/${env}`).boot(app, {port: com.port});
+    }
+  });
+}
+// Start boot

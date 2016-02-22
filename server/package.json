@@ -1,0 +1,40 @@
+{
+  "name": "leeba-sample",
+  "version": "1.0.0",
+  "description": "Sample leeba server",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakhu/leeba.git"
+  },
+  "keywords": [
+    "leeba",
+    "mvc",
+    "sysadmin",
+    "web-apps",
+    "apps"
+  ],
+  "author": "Gum-Joe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jakhu/leeba/issues"
+  },
+  "bin": {
+    "leeba": "bin/leeba"
+  },
+  "homepage": "https://github.com/jakhu/leeba#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "commander": "^2.9.0",
+    "cookie-parser": "^1.4.1",
+    "debug": "^2.2.0",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "jade": "^1.11.0",
+    "morgan": "^1.7.0"
+  }
+}

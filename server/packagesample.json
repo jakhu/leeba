@@ -1,0 +1,11 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "<description>",
+  "main": "app.js",
+  "scripts": {
+    "test": "bin/let test"
+  },
+  "author": "<output of 'git config user.name'>",
+  "license": "MIT"
+}

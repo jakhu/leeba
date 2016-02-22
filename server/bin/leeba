@@ -1,0 +1,7 @@
+#!/usr/env node
+'use strict';
+const com = require('commander');
+com
+  .version('1.0.0')
+  .command('server', 'start the server')
+  .parse(process.argv);

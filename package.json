@@ -1,0 +1,32 @@
+{
+  "name": "leeba",
+  "version": "1.0.0",
+  "description": "Leeba is a static site generator for express, but we think its more than just that.",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakhu/leeba.git"
+  },
+  "keywords": [
+    "leeba",
+    "mvc",
+    "sysadmin",
+    "web-apps",
+    "apps"
+  ],
+  "author": "Gum-Joe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jakhu/leeba/issues"
+  },
+  "bin": {
+    "leeba": "bin/leeba"
+  },
+  "homepage": "https://github.com/jakhu/leeba#readme",
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
+}

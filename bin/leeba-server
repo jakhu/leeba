@@ -1,8 +1,0 @@
-#!/usr/env node
-'use strict';
-const com = require('commander');
-// Setup commander
-com
-  .version('1.0.0')
-  .option('-p, --port [port]', 'The port to run the server on')
-  .parse(process.argv);

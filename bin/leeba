@@ -3,5 +3,5 @@
 const com = require('commander');
 com
   .version('1.0.0')
-  .command('server', 'start the server')
+  .command('generate', 'Generate a route, helper, view or database')
   .parse(process.argv);

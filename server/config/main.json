@@ -1,4 +1,11 @@
 {
   "port": 8080,
-  "paths": []
+  "paths": [],
+  "database": {
+    "adapter": "mongodb",
+    "location": "db/db.js"
+  },
+  "routes": {"dir": "app/routes", "files": [
+    {"file": "index.js", "path": "/"}
+  ]}
 }

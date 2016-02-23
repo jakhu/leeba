@@ -27,6 +27,8 @@
   },
   "homepage": "https://github.com/jakhu/leeba#readme",
   "dependencies": {
-    "commander": "^2.9.0"
+    "commander": "^2.9.0",
+    "debug": "^2.2.0",
+    "slash": "^1.0.0"
   }
 }

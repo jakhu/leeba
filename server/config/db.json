@@ -1,0 +1,23 @@
+{
+  "development": {
+    "datadir": "data/dev",
+    "program": "mongodb/mongod.exe",
+    "port": 8080,
+    "portoption": "--port",
+    "datapathoption": "--dbpath"
+  },
+  "production": {
+    "datadir": "data/production",
+    "program": "mongodb/mongod.exe",
+    "port": 8080,
+    "portoption": "--port",
+    "datapathoption": "--dbpath"
+  },
+  "test": {
+    "datadir": "data/test",
+    "program": "mongodb/mongod.exe",
+    "port": 8080,
+    "portoption": "--port",
+    "datapathoption": "--dbpath"
+  }
+}

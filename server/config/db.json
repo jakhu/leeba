@@ -19,5 +19,9 @@
     "port": 8080,
     "portoption": "--port",
     "datapathoption": "--dbpath"
+  },
+  "external": {
+    "url": "192.168.1.2:27017",
+    "external": true
   }
 }
